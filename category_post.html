@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+
+	{% for category in site.categories %}
+	<div style="display: none;" id="{{ category | first }}">
+		<h1 >{{ category | first }}</span>({{ category | last | size }})</span></h1>
+		<ul class="post-list">
+		    {% for post in category.last %}
+		        <li><a class="post-link" href="{{ post.url }}">{{ post.title }}<h6  class="post-meta">{{ post.date | date:"%Y-%m-%d"}}</h6></a></li>
+		    {% endfor %}
+		</ul>
+		</div>
+	{% endfor %}
+
+<script type="text/javascript">
+	window.onload=function() {
+	  var url = location.search; 
+	  var category = url.substring(1);//获取url中"?"符后的字串
+
+	  var showcate = document.getElementById(category);
+	  showcate.style.display= "block";	
+	}
+</script>
+
+	

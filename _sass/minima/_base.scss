@@ -3,7 +3,7 @@
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+dl, dd, ol, ul, figure, a, span {
   margin: 0;
   padding: 0;
 }
@@ -159,6 +159,13 @@ pre {
 
 
 
+.category {
+  max-width: calc((#{$content-width} - (#{$spacing-unit} * 2))*30);
+  margin: 0 auto;
+  float: left;
+}
+
+
 /**
  * Wrapper
  */
@@ -177,7 +184,30 @@ pre {
     padding-right: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
   }
+
+
+  .left {
+    width: 20%;
+    float: left;
+    border: 2px solid #999;
+    margin-right: 20px;
+    padding: 10px;
+    .cat-list {
+      border-bottom: 1px solid #999;
+      line-height: 25px;
+      padding-top: 10px;
+
+    }
+
+  }
+
+  .right {
+    width: 70%;
+    float: right;
+  }
 }
+
+
 
 
 
