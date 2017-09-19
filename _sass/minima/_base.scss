@@ -159,11 +159,7 @@ pre {
 
 
 
-.category {
-  max-width: calc((#{$content-width} - (#{$spacing-unit} * 2))*30);
-  margin: 0 auto;
-  float: left;
-}
+
 
 
 /**
@@ -187,10 +183,9 @@ pre {
 
 
   .left {
-    width: 20%;
+    background-color: #fffbf0;
+    width: 160px;
     float: left;
-    border: 2px solid #999;
-    margin-right: 20px;
     padding: 10px;
     .cat-list {
       border-bottom: 1px solid #999;
@@ -202,10 +197,20 @@ pre {
   }
 
   .right {
-    width: 70%;
-    float: right;
+    //background-color: red;
+    max-width: 740px;
+    padding:10px;
+    float: left;
+
+
   }
 }
+
+
+.active {
+  background-color: #e9e7ef;
+}
+
 
 
 
